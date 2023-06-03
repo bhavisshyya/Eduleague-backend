@@ -1,6 +1,7 @@
 import User from "../models/userModel.js";
 
 export const updateUser = async (req, res, next) => {
+   //this function is only to update user details
    const { email, fName, location, lName } = req.body;
    if (!email || !fName || !location || !lName)
       return next("No field can be left empty");
@@ -22,6 +23,9 @@ export const updateUser = async (req, res, next) => {
       token,
    });
 };
+
+//function to update user winnings
+//funtion to add money to wallet
 
 export const getUser = async (req, res, next) => {
    const user = await User.findById({ _id: req.params.id });
