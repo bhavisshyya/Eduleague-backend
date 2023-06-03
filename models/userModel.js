@@ -5,9 +5,12 @@ import jwt from "jsonwebtoken";
 
 const userSchema = new mongoose.Schema(
    {
-      name: {
+      fName: {
          type: String,
          required: [true, "Name is required"],
+      },
+      lName: {
+         type: String,
       },
       password: {
          type: String,
@@ -20,6 +23,18 @@ const userSchema = new mongoose.Schema(
          required: [true, "email cannot be empty"],
          unique: true,
          validate: validator.isEmail, //to validate email entered by user
+      },
+      isAdmin: {
+         type: Boolean,
+         default: false,
+      },
+      quizWon: {
+         type: Number,
+         default: 0,
+      },
+      quizParticipated: {
+         type: Number,
+         default: 0,
       },
    },
    { timestamps: true }

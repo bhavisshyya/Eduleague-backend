@@ -7,8 +7,9 @@ import cors from "cors"; // to allow cross origin requests
 import morgan from "morgan"; // logs which api has been hit
 
 // routes import
-// import userRoutes from "./route/userRoutes.js";
-
+import authRoutes from "./route/authRoutes.js";
+import userRoutes from "./route/userRoutes.js";
+import questionRoutes from "./route/questionRoutes.js";
 // error middleware
 import errorMiddelware from "./middlewares/errroMiddleware.js";
 
@@ -46,7 +47,9 @@ app.use(morgan("dev")); //logs which api route has been called and other info
 app.use("/uploads", express.static("uploads")); //to serve uploaded file
 
 //routes
-// app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/question", questionRoutes);
 
 // error middleWare
 app.use(errorMiddelware);
