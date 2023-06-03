@@ -10,6 +10,9 @@ import morgan from "morgan"; // logs which api has been hit
 import authRoutes from "./route/authRoutes.js";
 import userRoutes from "./route/userRoutes.js";
 import questionRoutes from "./route/questionRoutes.js";
+import quizRoutes from "./route/quizRoute.js";
+import participantRoutes from "./route/participantRoute.js";
+
 // error middleware
 import errorMiddelware from "./middlewares/errroMiddleware.js";
 
@@ -50,6 +53,8 @@ app.use("/uploads", express.static("uploads")); //to serve uploaded file
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/question", questionRoutes);
+app.use("/api/v1/quiz", quizRoutes);
+app.use("/api/v1/participant", participantRoutes);
 
 // error middleWare
 app.use(errorMiddelware);

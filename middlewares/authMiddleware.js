@@ -10,6 +10,7 @@ const userAuth = async (req, res, next) => {
    try {
       const payload = JWT.verify(token, process.env.JWT_KEY);
       req.user = { userId: payload.userId, isAdmin: payload.isAdmin };
+      console.log(req.user);
       next();
    } catch (error) {
       next("Invalid token");
