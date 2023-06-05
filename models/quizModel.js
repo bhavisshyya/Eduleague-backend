@@ -14,7 +14,7 @@ const quizSchema = new mongoose.Schema({
       type: String,
    },
    noOfParticipants: {
-      type: String,
+      type: Number,
       default: 0,
    },
    topic: {

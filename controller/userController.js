@@ -24,9 +24,6 @@ export const updateUser = async (req, res, next) => {
    });
 };
 
-//function to update user winnings
-//funtion to add money to wallet
-
 export const getUser = async (req, res, next) => {
    const user = await User.findById({ _id: req.params.id });
    if (!user) return next("no user with this id exists");

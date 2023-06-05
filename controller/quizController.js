@@ -60,7 +60,7 @@ export const getQuiz = async (req, res) => {
       return res.status(404).json({ error: "Quiz not found" });
    }
 
-   res.status(200).json({ quiz });
+   res.status(200).json(quiz);
 };
 
 //  Get All Quizs
@@ -71,4 +71,20 @@ export const getAllQuizes = async (req, res) => {
       .sort("-startTime");
 
    res.status(200).json({ quizs });
+};
+
+// update quiz (end quiz)
+export const updateQuiz = async (req, res, next) => {
+   const { id } = req.params;
+   const endTime = Date.now();
+   const quiz = await Quiz.findByIdAndUpdate(
+      { _id: id },
+      { endTime, isCompleted: true },
+      { new: true }
+   );
+
+   if (!quiz) {
+      return res.status(404).json({ error: "Quiz not found" });
+   }
+   res.json(quiz);
 };
