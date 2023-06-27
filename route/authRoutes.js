@@ -33,7 +33,7 @@ router.get("/login/failed", (req, res) => {
 router.get("/google", passport.authenticate("google", ["profile", "email"]));
 
 router.get(
-   "/google/callback",
+   "/google/callback", //hit this url from client to use google auth
    passport.authenticate("google", {
       successRedirect: process.env.CLIENT_URL, //redirect after successful login
       // failureRedirect: "client/route"

@@ -7,6 +7,7 @@ import cors from "cors"; // to allow cross origin requests
 import morgan from "morgan"; // logs which api has been hit
 import passport from "passport";
 import cookieSession from "cookie-session";
+import("./passport.js");
 
 // routes import
 import authRoutes from "./route/authRoutes.js";

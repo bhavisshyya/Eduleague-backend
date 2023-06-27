@@ -1,7 +1,7 @@
 import User from "../models/userModel.js";
 
 export const register = async (req, res, next) => {
-   const { phoneNo, password, fName } = req.body;
+   const { phoneNo, password, fName, referral } = req.body;
 
    if (!fName) return next("name is required");
 
@@ -10,12 +10,23 @@ export const register = async (req, res, next) => {
    if (!password) return next("password is required");
 
    const phoneNoCheck = await User.findOne({ phoneNo });
-   if (phoneNoCheck) return next("This emai is already been used");
+   if (phoneNoCheck) return next("This phone number is already been used");
 
    //we will hash password at model(as it is more secure) by using mongoose middleware
 
    const user = new User(req.body);
-   await user.save();
+   const ref_user = await User.findOne({ referralCode: referral });
+   if (referral && ref_user) {
+      user.balance = 75;
+      ref_user.balance += 25;
+      await ref_user.save();
+   }
+   console.log(user);
+   const savedUser = await user.save();
+
+   const generate_referral = savedUser._id.toString().slice(-10);
+   savedUser.referralCode = generate_referral;
+   await savedUser.save();
 
    const token = user.createJWT();
 
@@ -27,6 +38,7 @@ export const register = async (req, res, next) => {
          lName: user.lName,
          phoneNo: user.phoneNo,
          location: user.location,
+         referralCode: generate_referral,
          token,
       },
    });

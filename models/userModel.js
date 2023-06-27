@@ -19,9 +19,6 @@ const userSchema = new mongoose.Schema(
       },
       phoneNo: {
          type: String,
-         required: [true, "phoneNo cannot be empty"],
-         unique: true,
-         validate: validator.isMobilePhone, //to validate phoneNo entered by user
       },
       isAdmin: {
          type: Boolean,
@@ -45,6 +42,9 @@ const userSchema = new mongoose.Schema(
       provider: {
          type: String,
          default: "normal login",
+      },
+      referralCode: {
+         type: String,
       },
    },
    { timestamps: true }

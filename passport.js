@@ -1,7 +1,7 @@
 import GoogleStrategy from "passport-google-oauth20";
 import FacebookStrategy from "passport-facebook";
 import passport from "passport";
-import User from "../models/userModel.js";
+import User from "./models/userModel.js";
 
 passport.use(
    new GoogleStrategy.Strategy(
