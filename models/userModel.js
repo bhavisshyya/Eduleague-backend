@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
    {
       fName: {
          type: String,
-         required: [true, "Name is required"],
+         // required: [true, "Name is required"],
       },
       lName: {
          type: String,
@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
          minlength: [6, "length of password should be greater than 6"],
          select: true,
       },
-      phoneNo: {
+      phoneNumber: {
          type: String,
          validate: validator.isMobilePhone,
       },
@@ -48,6 +48,14 @@ const userSchema = new mongoose.Schema(
       referralCode: {
          type: String,
       },
+      otp: {
+         type: String,
+         // required: true,
+      },
+      //  otpExpiration: {
+      //    type: Date,
+      //    required: true,
+      //  },
    },
    { timestamps: true }
 );

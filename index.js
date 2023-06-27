@@ -15,6 +15,7 @@ import userRoutes from "./route/userRoutes.js";
 import questionRoutes from "./route/questionRoutes.js";
 import quizRoutes from "./route/quizRoute.js";
 import participantRoutes from "./route/participantRoute.js";
+import otpRoutes from "./route/otpRoute.js";
 
 // error middleware
 import errorMiddelware from "./middlewares/errroMiddleware.js";
@@ -68,6 +69,7 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/question", questionRoutes);
 app.use("/api/v1/quiz", quizRoutes);
 app.use("/api/v1/participant", participantRoutes);
+app.use("/api/v1", otpRoutes);
 
 // error middleWare
 app.use(errorMiddelware);
