@@ -7,6 +7,7 @@ const router = express.Router();
 router.post("/register", register);
 router.post("/login", login);
 
+//to check get user when logged in from social
 router.get("/login/success", (req, res) => {
    if (req.user) {
       const token = jwt.sign({ userId: req.user.id }, process.env.JWT_KEY, {
@@ -52,5 +53,10 @@ router.get(
       // failureRedirect: "/login/failed",
    })
 );
+
+// to clear session
+router.get("/logout", (req, res) => {
+   req.logout();
+});
 
 export default router;
