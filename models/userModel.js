@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema(
       },
       phoneNo: {
          type: String,
+         validate: validator.isMobilePhone,
       },
       isAdmin: {
          type: Boolean,
