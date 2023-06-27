@@ -5,6 +5,8 @@ import "express-async-errors"; //to avoid writing try catch
 import connectDb from "./config/db.js"; //to connect to db
 import cors from "cors"; // to allow cross origin requests
 import morgan from "morgan"; // logs which api has been hit
+import passport from "passport";
+import cookieSession from "cookie-session";
 
 // routes import
 import authRoutes from "./route/authRoutes.js";
@@ -35,6 +37,16 @@ app.use(mongoSanitize()); //to secure database
 app.use(helmet()); //to secure header data
 app.use(xss()); //to prevent from cross site scripting
 app.use(express.json()); //to use json data in our application
+app.use(
+   cookieSession({
+      name: "session",
+      keys: ["eduleague"],
+      maxAge: 24 * 60 * 60 * 100,
+   })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(
    cors({

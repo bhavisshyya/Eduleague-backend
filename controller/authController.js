@@ -1,16 +1,16 @@
 import User from "../models/userModel.js";
 
 export const register = async (req, res, next) => {
-   const { email, password, fName } = req.body;
+   const { phoneNo, password, fName } = req.body;
 
    if (!fName) return next("name is required");
 
-   if (!email) return next("email is required");
+   if (!phoneNo) return next("phone Number is required");
 
    if (!password) return next("password is required");
 
-   const emailCheck = await User.findOne({ email });
-   if (emailCheck) return next("This emai is already been used");
+   const phoneNoCheck = await User.findOne({ phoneNo });
+   if (phoneNoCheck) return next("This emai is already been used");
 
    //we will hash password at model(as it is more secure) by using mongoose middleware
 
@@ -25,7 +25,7 @@ export const register = async (req, res, next) => {
       user: {
          fName: user.fName,
          lName: user.lName,
-         email: user.email,
+         phoneNo: user.phoneNo,
          location: user.location,
          token,
       },
@@ -33,19 +33,19 @@ export const register = async (req, res, next) => {
 };
 
 export const login = async (req, res, next) => {
-   const { email, password } = req.body;
+   const { phoneNo, password } = req.body;
 
    if (!password) return next("password is required");
 
-   if (!email) return next("email is required");
+   if (!phoneNo) return next("phoneNo is required");
 
-   let user = await User.findOne({ email }).select("+password");
+   let user = await User.findOne({ phoneNo }).select("+password");
 
-   if (!user) return next("wrong email id or password");
+   if (!user) return next("wrong phone Number or password");
 
    const check = await user.comparePassword(password);
 
-   if (!check) return next("wrong email id or password");
+   if (!check) return next("wrong phone Number or password");
 
    const token = user.createJWT();
 

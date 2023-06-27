@@ -14,15 +14,14 @@ const userSchema = new mongoose.Schema(
       },
       password: {
          type: String,
-         required: [true, "Password cannot be empty"],
          minlength: [6, "length of password should be greater than 6"],
          select: true,
       },
-      email: {
+      phoneNo: {
          type: String,
-         required: [true, "email cannot be empty"],
+         required: [true, "phoneNo cannot be empty"],
          unique: true,
-         validate: validator.isEmail, //to validate email entered by user
+         validate: validator.isMobilePhone, //to validate phoneNo entered by user
       },
       isAdmin: {
          type: Boolean,
@@ -38,7 +37,14 @@ const userSchema = new mongoose.Schema(
       },
       balance: {
          type: Number,
-         default: 0,
+         default: 50,
+      },
+      socialId: {
+         type: String,
+      },
+      provider: {
+         type: String,
+         default: "normal login",
       },
    },
    { timestamps: true }
