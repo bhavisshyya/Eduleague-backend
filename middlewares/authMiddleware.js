@@ -1,7 +1,6 @@
 import JWT from "jsonwebtoken";
 
 const userAuth = async (req, res, next) => {
-   if (req.cookies.social) return next();
    const authHeader = req.headers.authorization;
    if (!authHeader || !authHeader.startsWith("Bearer"))
       return next("You are not authorized");

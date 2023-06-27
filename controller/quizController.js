@@ -81,7 +81,9 @@ export const updateQuiz = async (req, res, next) => {
       { _id: id },
       { endTime, isCompleted: true },
       { new: true }
-   );
+   ).populate({
+      path: "participants",
+   });
 
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });

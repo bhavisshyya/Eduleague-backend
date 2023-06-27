@@ -39,6 +39,7 @@ const userSchema = new mongoose.Schema(
       },
       socialId: {
          type: String,
+         default: "",
       },
       provider: {
          type: String,
