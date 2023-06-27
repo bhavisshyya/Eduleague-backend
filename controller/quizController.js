@@ -85,6 +85,15 @@ export const updateQuiz = async (req, res, next) => {
       path: "participants",
    });
 
+   let winner;
+   let score = 0;
+   const participants = quiz.participants;
+
+   // add winner logic
+   // participants.forEach(item => {
+   //    if(item.totalMarks>score)
+   // });
+
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });
    }

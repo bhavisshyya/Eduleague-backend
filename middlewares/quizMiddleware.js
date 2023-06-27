@@ -5,11 +5,11 @@ export const checkParticipant = async (req, res, next) => {
    const quiz = await Quiz.findById(id).populate("participants");
    const participants = quiz.participants;
 
-   participants.forEach((item) => {
-      if (item.user == req.user.userId) {
+   for (let i = 0; i < participants.length; i++) {
+      if (participants[i].user == req.user.userId) {
          return next("You have already participated in this quiz");
       }
-   });
+   }
 
    next();
 };
