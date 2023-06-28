@@ -5,8 +5,7 @@ export const checkParticipant = async (req, res, next) => {
    const quiz = await Quiz.findById(id).populate("participants");
    const participants = quiz.participants;
 
-   const maxCapacity = quiz.capacity; // Assuming the quiz document has a field named "capacity" that specifies the maximum capacity
-
+   const maxCapacity = quiz.capacity;
    if (participants.length >= maxCapacity) {
       return next("Quiz has reached its maximum capacity");
    }
