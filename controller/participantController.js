@@ -12,18 +12,20 @@ export const createParticipant = async (req, res) => {
    });
 
    const savedParticipant = await participant.save();
-
-   const user = await User.findById(userId);
-   user.quizParticipated++;
-   await user.save();
-
    const quiz = await Quiz.findByIdAndUpdate(
       id,
       { $push: { participants: savedParticipant._id } },
       { new: true }
    );
    quiz.noOfParticipants++;
+   console.log(quiz);
    await quiz.save();
+
+   const user = await User.findById(userId);
+   user.quizParticipated++;
+   user.balance -= quiz.entryCoins;
+   user.walletLog.push(`-${quiz.entryCoins} for joining the quiz`);
+   await user.save();
 
    res.status(201).json(savedParticipant);
 };

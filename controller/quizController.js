@@ -1,5 +1,7 @@
 import Quiz from "../models/quizModel.js";
 import Question from "../models/questionModel.js";
+import Participant from "../models/participantModel.js";
+import User from "../models/userModel.js";
 
 export const createQuiz = async (req, res) => {
    const { course, subject, topic, entryCoins } = req.body;
@@ -32,9 +34,25 @@ export const createQuiz = async (req, res) => {
       entryCoins,
    });
 
-   await quiz.save();
+   const userId = req.user.userId;
+   const participant = new Participant({
+      quiz: quiz.id,
+      user: userId,
+      isCompleted: false,
+   });
+
+   const savedParticipant = await participant.save();
+   const user = await User.findById(userId);
+   user.quizParticipated++;
+   user.balance -= entryCoins;
+   user.walletLog.push(`-${entryCoins} for creating the quiz`);
+   await user.save();
+   quiz.noOfParticipants++;
+   quiz.participants.push(savedParticipant);
 
    await quiz.populate("questions");
+
+   await quiz.save();
 
    res.status(201).json({ message: "Quiz created successfully", quiz });
 };
@@ -88,5 +106,24 @@ export const updateQuiz = async (req, res, next) => {
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });
    }
-   res.json(quiz);
+
+   const sortedParticipants = quiz.participants.sort((a, b) => {
+      if (a.totalMarks === b.totalMarks) {
+         return a.timeTaken - b.timeTaken;
+      }
+      return b.totalMarks - a.totalMarks;
+   });
+
+   const winner = sortedParticipants[0];
+
+   const user = await User.findById(winner.user);
+
+   const quizAmount = quiz.entryCoins;
+   const walletAmount = 0.6 * quizAmount + quizAmount;
+
+   user.balance += walletAmount;
+   user.walletLog.push(`+${walletAmount} for winning the quiz`);
+   await user.save();
+   console.log(user);
+   res.json({ winner });
 };
