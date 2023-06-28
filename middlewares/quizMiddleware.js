@@ -13,3 +13,12 @@ export const checkParticipant = async (req, res, next) => {
 
    next();
 };
+
+export const checkCreator = async (req, res, next) => {
+   const id = req.params.id;
+   const quiz = await Quiz.findById(id);
+   if (quiz.creator != req.user.userId)
+      return next("only creator can end the quiz");
+
+   return next();
+};
