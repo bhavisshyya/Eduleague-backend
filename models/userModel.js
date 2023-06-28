@@ -73,7 +73,7 @@ userSchema.pre("save", async function (next) {
 // JSON Token
 userSchema.methods.createJWT = function () {
    return jwt.sign(
-      { userId: this._id, isEmp: this.isEmployer },
+      { userId: this._id, isAdmin: this.isAdmin },
       process.env.JWT_KEY,
       {
          expiresIn: "3d",

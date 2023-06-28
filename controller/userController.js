@@ -30,3 +30,13 @@ export const getUser = async (req, res, next) => {
    const { password, isAdmin, ...others } = user._doc;
    res.status(200).json(others);
 };
+
+export const getWallet = async (req, res, next) => {
+   const userId = req.user.userId;
+   const user = await User.findOne({ _id: userId });
+   let wallet = {};
+   wallet.balance = user.balance;
+   wallet.log = user.walletLog;
+
+   res.status(200).json(wallet);
+};
