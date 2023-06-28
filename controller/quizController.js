@@ -4,7 +4,7 @@ import Participant from "../models/participantModel.js";
 import User from "../models/userModel.js";
 
 export const createQuiz = async (req, res) => {
-   const { course, subject, topic, entryCoins, type } = req.body;
+   const { course, subject, topic, entryCoins, type, capacity } = req.body;
    const creator = req.user.userId;
    if (!course || !entryCoins) {
       return res
@@ -33,6 +33,7 @@ export const createQuiz = async (req, res) => {
       questions: questions.map((question) => question._id),
       entryCoins,
       type: type || "single",
+      capacity,
    });
 
    const userId = req.user.userId;
