@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema(
    {
       fName: {
          type: String,
-         // required: [true, "Name is required"],
       },
       lName: {
          type: String,
@@ -17,8 +16,9 @@ const userSchema = new mongoose.Schema(
          minlength: [6, "length of password should be greater than 6"],
          select: true,
       },
-      phoneNumber: {
+      phoneNo: {
          type: String,
+         unique: true,
          validate: validator.isMobilePhone,
       },
       isAdmin: {
@@ -37,11 +37,14 @@ const userSchema = new mongoose.Schema(
          type: Number,
          default: 50,
       },
+      walletLog: {
+         type: [String],
+      },
       socialId: {
          type: String,
          default: "",
       },
-      provider: {
+      socialTag: {
          type: String,
          default: "normal login",
       },

@@ -33,6 +33,10 @@ const quizSchema = new mongoose.Schema({
          ref: "Participant",
       },
    ],
+   capacity: {
+      type: Number,
+      default: 2,
+   },
    startTime: {
       type: Date,
       default: Date.now,

@@ -1,11 +1,22 @@
 import express from "express";
-import { login, register } from "../controller/authController.js";
+import {
+   changePassword,
+   forgetPassword,
+   login,
+   register,
+   socialLogin,
+} from "../controller/authController.js";
 import passport from "passport";
 import jwt from "jsonwebtoken";
+import userAuth from "../middlewares/authMiddleware.js";
 const router = express.Router();
 
 router.post("/register", register);
 router.post("/login", login);
+
+router.post("/social-login", socialLogin);
+router.put("/forgot-password", forgetPassword);
+router.put("/change-password", userAuth, changePassword);
 
 //to check get user when logged in from social
 router.get("/login/success", (req, res) => {
