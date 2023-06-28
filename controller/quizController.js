@@ -4,7 +4,7 @@ import Participant from "../models/participantModel.js";
 import User from "../models/userModel.js";
 
 export const createQuiz = async (req, res) => {
-   const { course, subject, topic, entryCoins } = req.body;
+   const { course, subject, topic, entryCoins, type } = req.body;
    const creator = req.user.userId;
    if (!course || !entryCoins) {
       return res
@@ -32,6 +32,7 @@ export const createQuiz = async (req, res) => {
       topic: topic || null,
       questions: questions.map((question) => question._id),
       entryCoins,
+      type: type || "single",
    });
 
    const userId = req.user.userId;
@@ -60,9 +61,9 @@ export const createQuiz = async (req, res) => {
 //  get single Quiz
 
 export const getQuiz = async (req, res) => {
-   const id = req.params.id;
+   const type = req.params.type || "single";
 
-   const quiz = await Quiz.findById(id)
+   const quiz = await Quiz.findById({ type })
       .populate("questions")
       .populate("creator")
       .populate({
@@ -84,6 +85,8 @@ export const getQuiz = async (req, res) => {
 //  Get All Quizs
 
 export const getAllQuizes = async (req, res) => {
+   const type = req.query.type;
+
    const quizs = await Quiz.find({ isCompleted: true })
       .populate("creator")
       .sort("-startTime");

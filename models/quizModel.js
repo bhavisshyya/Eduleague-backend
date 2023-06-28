@@ -20,6 +20,9 @@ const quizSchema = new mongoose.Schema({
    topic: {
       type: String,
    },
+   type: {
+      type: String,
+   },
    questions: [
       {
          type: mongoose.Schema.Types.ObjectId,

@@ -1,0 +1,1517 @@
+[
+    {
+        "_id": "646ecb1250a266f53cc5e9e1",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If two conducting sphere are connected after charging separately then?",
+        "options": [
+            "Electrostatic energy energy and charge remains conserved",
+            "Electrostatic energy sphere energy will remain conserved",
+            "Electrostatic energy charges remains conserved",
+            "None"
+        ],
+        "correctAnswer": "Electrostatic energy charges remains conserved",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e2",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Charge is the property associated with matter due to which it produces and experiences ?",
+        "options": [
+            "magnetic effects only",
+            "both electric and magnetic effects",
+            "Electrostatic energy charges remains conserved",
+            "electric effects only"
+        ],
+        "correctAnswer": "both electric and magnetic effects",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e3",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Quantisation of charge was experimentally demonstrated by ?",
+        "options": [
+            "Millikan’s oil drop experiment",
+            "Davisson and Germer experiment",
+            "Frank-Hertz experiment",
+            "Einstein’s photoelectric effect"
+        ],
+        "correctAnswer": "Millikan’s oil drop experiment",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e4",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric lines of force about a negative point charge are ?",
+        "options": [
+            "radial, outwards",
+            "radial, inwards",
+            "circular anticlockwise",
+            "circular clockwise"
+        ],
+        "correctAnswer": "radial, inwards",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e5",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Gauss's law is valid for ?",
+        "options": [
+            "only irregular open surfaces",
+            "any open surface",
+            "any closed surface",
+            "only regular close surfaces"
+        ],
+        "correctAnswer": "any closed surface",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e6",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "In non-uniform electric field, electric dipole experiences ?",
+        "options": [
+            "force only",
+            "torque only",
+            "torque as well as net force",
+            "None of these"
+        ],
+        "correctAnswer": "torque as well as net force",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e7",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The surface considered for Gauss’s law is called ?",
+        "options": [
+            "Plane surface",
+            "Gaussian surface",
+            "Closed surface",
+            "Spherical surface"
+        ],
+        "correctAnswer": "Gaussian surface",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e8",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A point charge +q is placed at a distance d from an isolated conducting plane. The field at a point P on the other side of the plane is ?",
+        "options": [
+            "directed radially towards the point charge.",
+            "directed radially away from the point charge.",
+            "directed perpendicular to the plane and away from the plane.",
+            "directed perpendicular to the plane but towards the plane."
+        ],
+        "correctAnswer": "directed perpendicular to the plane and away from the plane.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e9",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The unit of electric dipole moment is ?",
+        "options": [
+            "farad",
+            "coulomb-meter",
+            "newton",
+            "coulomb"
+        ],
+        "correctAnswer": "coulomb-meter",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e10",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A soap bubble is given a negative charge, then its radius ?",
+        "options": [
+            "decreases",
+            "may increase or decrease",
+            "remains unchanged",
+            "increases"
+        ],
+        "correctAnswer": "increases",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e11",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The unit of intensity of electric field is ?",
+        "options": [
+            "Newton/coulomb",
+            "metre/volt",
+            "Joule/newton",
+            "Coulomb/newton"
+        ],
+        "correctAnswer": "metre/volt",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e12",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If a body is negatively charged, then it has ?",
+        "options": [
+            "deficiency of neutrons",
+            "deficiency of electrons",
+            "excess of electrons",
+            "excess of protons"
+        ],
+        "correctAnswer": "excess of electrons",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e13",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The law, governing the force between electric charges is known as ?",
+        "options": [
+            "Faraday's law",
+            "Coulomb's law",
+            "Ampere's law",
+            "Ohm's law"
+        ],
+        "correctAnswer": "Coulomb's law",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e14",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A point charge is kept at the centre of metallic insulated spherical shell. Then ?",
+        "options": [
+            "electric potential inside the sphere is zero",
+            "electric field inside the sphere is zero",
+            "electric field out side the sphere is zero",
+            "net induced charge on the sphere is zero"
+        ],
+        "correctAnswer": "net induced charge on the sphere is zero",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e15",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The electric field at a point on equatorial line of a dipole and direction of the dipole moment ?",
+        "options": [
+            "are not related",
+            "will be perpendicular",
+            "will be in opposite direction",
+            "will be parallel"
+        ],
+        "correctAnswer": "will be in opposite direction",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e16",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The formation of a dipole is due to two equal and dissimilar point charges placed at a ?",
+        "options": [
+            "short distance",
+            "long distance",
+            "above each other",
+            "none of these"
+        ],
+        "correctAnswer": "short distance",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e17",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Debye is the unit of ?",
+        "options": [
+            "electric dipole moment",
+            "electric potential",
+            "electric field intensity",
+            "electric flux"
+        ],
+        "correctAnswer": "electric dipole moment",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e18",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The Gaussian surface ?",
+        "options": [
+            "can pass through any system of discrete charges.",
+            "can pass through a continuous charge distribution as well as any system of discrete charges.",
+            "can pass through a continuous charge distribution.",
+            "cannot pass through a continuous charge distribution."
+        ],
+        "correctAnswer": "can pass through a continuous charge distribution",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e19",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "What happens when some charge is placed on a soap bubble ?",
+        "options": [
+            "Its radius increases",
+            "The bubble collapses",
+            "Its radius decreases",
+            "None of these"
+        ],
+        "correctAnswer": "Its radius increases",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e20",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The conservation of electric charge implies that ?",
+        "options": [
+            "Charge can’t be destroyed",
+            "The number of charged particle in the universe is constant",
+            "Simultaneous creation of equal and opposite charges is permissible",
+            "Charge can’t be created"
+        ],
+        "correctAnswer": "Simultaneous creation of equal and opposite charges is permissible",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e21",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When a glass rod is rubbed with silk, it ?",
+        "options": [
+            "gives protons to silk.",
+            "gains protons from silk.",
+            "gives electrons to silk.",
+            "gains electrons from silk."
+        ],
+        "correctAnswer": "gives electrons to silk.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e22",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The electric field inside a spherical shell of uniform surface charge density is ?",
+        "options": [
+            "directly proportional to the distance from the centre.",
+            "constant, less than zero.",
+            "zero.",
+            "none of the these"
+        ],
+        "correctAnswer": "zero.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e23",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A point charge + q is placed at a distance d from an isolated conducting plane. The field at a point P on the other side of the plane is ?",
+        "options": [
+            "directed radially away from the point charge",
+            "directed radially towards the point charge",
+            "directed perpendicular to the plane but towards the plane",
+            "directed perpendicular to the plane and away from the plane"
+        ],
+        "correctAnswer": "directed perpendicular to the plane and away from the plane",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e24",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Coulomb’s law is true for ?",
+        "options": [
+            "charged as well as uncharged particles",
+            "nuclear distances (= 10^-15 m)",
+            "atomic distances (= 10^-11 m)",
+            "all the distances"
+        ],
+        "correctAnswer": "all the distances",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e25",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If an electron has an initial velocity in a direction different from that of an electric field, the path of the electron is ?",
+        "options": [
+            "a parabola",
+            "a circle",
+            "a straight line",
+            "an ellipse"
+        ],
+        "correctAnswer": "a parabola",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e26",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric flux over a surface in an electric field may be ?",
+        "options": [
+            "negative",
+            "zero",
+            "positive",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e27",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric dipole is kept in a non-uniform electric field. It experiences ?",
+        "options": [
+            "a force but not a torque",
+            "neither a force nor a torque",
+            "a force and a torque",
+            "a torque but no force"
+        ],
+        "correctAnswer": "a force and a torque",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e28",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Quantisation of charge implies ?",
+        "options": [
+            "There is a minimum permissible magnitude of charge",
+            "Charge can’t be created",
+            "Charge exists on particles",
+            "Charge does not exist"
+        ],
+        "correctAnswer": "There is a minimum permissible magnitude of charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e29",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If an electric dipole is kept in a uniform electric field then resultant electric force on it is ?",
+        "options": [
+            "depend upon capacity of dipole",
+            "never zero",
+            "always zero",
+            "None"
+        ],
+        "correctAnswer": "always zero",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e30",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Two point charges +8q and -2q are located at ,v = O and ,v = L respectively. The location of a point on the .v-axis at which the net electric field due to these two point charges b is zero ?",
+        "options": [
+            "2L",
+            "8L",
+            "4L",
+            "L/4"
+        ],
+        "correctAnswer": "2L",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e31",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The dielectric constant of a metal is ?",
+        "options": [
+            "1",
+            "-1",
+            "0",
+            "infinite"
+        ],
+        "correctAnswer": "infinite",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e32",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric field in a cavity of metal ?",
+        "options": [
+            "is always zero",
+            "depends upon the surroundings",
+            "is not necessarily zero",
+            "depends upon the size of cavity"
+        ],
+        "correctAnswer": "is not necessarily zero",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e33",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric field can deflect ?",
+        "options": [
+            "Gamma rays",
+            "X-rays",
+            "alpha particles",
+            "neutrons"
+        ],
+        "correctAnswer": "alpha particles",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e34",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A hemisphere is uniformly charged positively. The electric field at a point on a diameter away from the centre is directed ?",
+        "options": [
+            "at an angle tilted towards the diameter",
+            "perpendicular to the diameter",
+            "at an angle tilted away from the diameter",
+            "parallel to the diameter"
+        ],
+        "correctAnswer": "perpendicular to the diameter",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e35",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A parrot comes and sits on a bare high power line. It will ?",
+        "options": [
+            "get killed instantaneously",
+            "not be affected practically",
+            "experience a strong shock",
+            "experience a mild shock"
+        ],
+        "correctAnswer": "not be affected practically",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e36",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If sphere of bad conductor is given charge then it is distributed on ?",
+        "options": [
+            "only inside the surface",
+            "surface",
+            "inside the surface",
+            "None"
+        ],
+        "correctAnswer": "None",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e37",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Consider a region inside which, there are various types of charges but the total charge is zero. At points outside the region ?",
+        "options": [
+            "the work done to move a charged particle along a closed path, away from the region will not be zero.",
+            "the electric field is necessarily zero.",
+            "the electric field is due to the dipole moment of the charge distribution only.",
+            "the dominant electric field is inversely proportional to r3, for large r (distance from origin)."
+        ],
+        "correctAnswer": "the dominant electric field is inversely proportional to r3, for large r (distance from origin).",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e38",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric field lines provide information about ?",
+        "options": [
+            "direction",
+            "nature of charge",
+            "field strength",
+            "all of these"
+        ],
+        "correctAnswer": "all of these",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e39",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A charge Q is divided into two parts of q and Q – q. If the coulomb repulsion between them when they are separated is to be maximum, the ratio of Q/q should be ?",
+        "options": [
+            "1:4",
+            "4:1",
+            "2:1",
+            "1:2"
+        ],
+        "correctAnswer": "2:1",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e40",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The Gaussian surface for calculating the electric field due to a charge distribution is ?",
+        "options": [
+            "A spherical surface",
+            "Any closed surface around the charge distribution",
+            "Any surface near the charge distribution",
+            "A symmetrical closed surface at every point of which electric field has a single fixed value."
+        ],
+        "correctAnswer": "A symmetrical closed surface at every point of which electric field has a single fixed value.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e41",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When an electric dipole is placed in a uniform electric field, it experiences ?",
+        "options": [
+            "Neither any force nor any torque",
+            "Force but no torque",
+            "Torque but no net force",
+            "Force as well as torque"
+        ],
+        "correctAnswer": "Torque but no net force",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e42",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When placed in a uniform field, a dipole experiences ?",
+        "options": [
+            "a torque",
+            "neither a net force nor a torque",
+            "a net force",
+            "both a net force and torque"
+        ],
+        "correctAnswer": "a torque",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e43",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Corona discharge takes place ?",
+        "options": [
+            "at the centre of the conductor",
+            "outside the conductor",
+            "at the surface of a conductor",
+            "near the sharp points of a conductor"
+        ],
+        "correctAnswer": "near the sharp points of a conductor",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e44",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Which of the following is the best insulator ?",
+        "options": [
+            "Graphite",
+            "Ebonite",
+            "Paper",
+            "Carbon"
+        ],
+        "correctAnswer": "Ebonite",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e45",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A charged particle is free to move in an electric field. It will travel ?",
+        "options": [
+            "along a line of force, if it has some initial velocity in the direction of an acute angle with the line of force",
+            "along a line of force, if its initial velocity is zero",
+            "always along a line of force",
+            "none of the above"
+        ],
+        "correctAnswer": "always along a line of force",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e46",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A region surrounding a stationary electric dipoles has ?",
+        "options": [
+            "no electric and magnetic fields",
+            "magnetic field only",
+            "electric field only",
+            "both electric and magnetic fields"
+        ],
+        "correctAnswer": "electric field only",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e47",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric dipole has a pair of equal and opposite point charges q and –q separated by a distance 2x. The axis of the dipole is ?",
+        "options": [
+            "Perpendicular to the line joining the two charges drawn at the centre and pointing downward direction",
+            "Perpendicular to the line joining the two charges drawn at the centre and pointing upward direction",
+            "from positive charge to negative charge",
+            "from negative charge to positive charge"
+        ],
+        "correctAnswer": "from positive charge to negative charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e48",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Which of the following statements is not true about Gauss’s law ?",
+        "options": [
+            "Gauss’s law is based on the inverse square dependence on distance contained in the coulomb’s law",
+            "Gauss’s law is not much useful in calculating electrostatic field when the system has some symmetry.",
+            "Gauss’s law is true for any closed surface.",
+            "The term q on the right side of Gauss’s law includes the sum of all charges enclosed by the surface."
+        ],
+        "correctAnswer": "Gauss’s law is not much useful in calculating electrostatic field when the system has some symmetry.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e49",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The force per unit charge is known as ?",
+        "options": [
+            "electric field",
+            "electric current",
+            "electric potential",
+            "electric flux"
+        ],
+        "correctAnswer": "electric field",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e50",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Which of the following statement is correct? The electric field at a point is ?",
+        "options": [
+            "discontinuous only if there is a negative charge at that point.",
+            "discontinuous if there is a charge at that point.",
+            "always continuous.",
+            "continuous if there is a charge at that point."
+        ],
+        "correctAnswer": "discontinuous if there is a charge at that point.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e51",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Which one of the following is the unit of electric field ?",
+        "options": [
+            "Volt",
+            "N/C",
+            "Coulomb",
+            "Newton"
+        ],
+        "correctAnswer": "N/C",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e52",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The graph drawn between V are r for a non-conducting charged solid sphere of radius R for r < R will be ?",
+        "options": [
+            "parabola",
+            "hyperbola",
+            "straight line",
+            "None of these"
+        ],
+        "correctAnswer": "None of these",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e53",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Charge is ?",
+        "options": [
+            "conserved",
+            "associated with mass",
+            "transferable",
+            "All of these"
+        ],
+        "correctAnswer": "All of these",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e54",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "On charging by conduction, mass of a body may ?",
+        "options": [
+            "decreases",
+            "increase",
+            "None of these",
+            "increase or decrease"
+        ],
+        "correctAnswer": "increase or decrease",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e55",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If one penetrates a uniformly charged spherical cloud, electric field strength ?",
+        "options": [
+            "remains constant",
+            "increases directly as the distance from the centre",
+            "decreases directly as the distance from the centre",
+            "None of these"
+        ],
+        "correctAnswer": "decreases directly as the distance from the centre",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e56",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A hollow sphere of charge does not have an electric field at ?",
+        "options": [
+            "interior point",
+            "beyond 100 m",
+            "outer point",
+            "beyond 2 m"
+        ],
+        "correctAnswer": "interior point",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e57",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Which of the following is not a property of charge ?",
+        "options": [
+            "Conservation",
+            "Additivity",
+            "Continuity",
+            "Quantization"
+        ],
+        "correctAnswer": "Continuity",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e58",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The electric field inside a spherical shell of uniform surface charge density is ?",
+        "options": [
+            "proportional to the distance from the curve",
+            "constant different from zero",
+            "zero",
+            "None of the above"
+        ],
+        "correctAnswer": "Continuity",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e59",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "In the annihilation process, in which an electron and a positron transform into two gamma rays, which property of electric charge is displayed ?",
+        "options": [
+            "Attraction and repulsion",
+            "Conservation of charge",
+            "Quantisation of charge",
+            "Additivity of charge"
+        ],
+        "correctAnswer": "Conservation of charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e60",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Quantisation of charge implies ?",
+        "options": [
+            "there is a minimum permissible charge on a particle",
+            "charge, which is a fraction of a coulomb is not possible.",
+            "charge exists on particles",
+            "charge cannot be destroyed"
+        ],
+        "correctAnswer": "charge, which is a fraction of a coulomb is not possible.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e61",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The ratio of electric force between two electrons to the gravitational force between them is of the order ?",
+        "options": [
+            "10^39",
+            "1",
+            "10^42",
+            "10^36"
+        ],
+        "correctAnswer": "10^42",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e62",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The conservation of electric charge implies that ?",
+        "options": [
+            "The number of charged particle in the universe is constant",
+            "Charge can’t be created",
+            "Charge can’t be destroyed",
+            "All of these are correct"
+        ],
+        "correctAnswer": "All of these are correct",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e63",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Three charges + 3q + q and Q are placed on a st. line with equal separation. In order to make the net force on q to be zero, the value of Q will be ?",
+        "options": [
+            "-3q",
+            "-4q",
+            "+3q",
+            "+2q"
+        ],
+        "correctAnswer": "+3q",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e64",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Gauss’s law will be invalid if ?",
+        "options": [
+            "the velocity of light is not a universal constant.",
+            "the inverse square law is not exactly true.",
+            "there is magnetic monopoles.",
+            "none of these."
+        ],
+        "correctAnswer": "the inverse square law is not exactly true.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e65",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric field at a point varies as r° for ?",
+        "options": [
+            "a line charge of infinite length",
+            "a point charge",
+            "an electric dipole",
+            "a plane infinite sheet of charge."
+        ],
+        "correctAnswer": "a plane infinite sheet of charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e66",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "In general, metallic ropes are suspended on the carriers taking inflammable materials. The reason is ?",
+        "options": [
+            "to keep the body of the carrier in contact with the earth.",
+            "to control the speed of the carrier.",
+            "to keep the centre of gravity of the carrier nearer to the earth.",
+            "none of these."
+        ],
+        "correctAnswer": "to keep the centre of gravity of the carrier nearer to the earth.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e67",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The SI units of electric dipole moment are ?",
+        "options": [
+            "C",
+            "Cm",
+            "Nm-1",
+            "Cm-1"
+        ],
+        "correctAnswer": "Cm",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e68",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The belt of a Vande Graaf generator gets charge by ?",
+        "options": [
+            "induction",
+            "electrification",
+            "corona discharge",
+            "None of these"
+        ],
+        "correctAnswer": "corona discharge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e69",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "On rubbing, when one body gets positively charged and other negatively charged, the electrons transferred from positively charged body to negatively charged body are ?",
+        "options": [
+            "yet to be established",
+            "valence electrons only",
+            "both valence electrons and electrons of inner shell",
+            "electrons of inner shells"
+        ],
+        "correctAnswer": "valence electrons only",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e70",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A positively charged rod is brought near an uncharged conductor. If the rod is then suddenly withdrawn, the charge left on the conductor will be ?",
+        "options": [
+            "negative",
+            "zero",
+            "cannot say",
+            "positive"
+        ],
+        "correctAnswer": "zero",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e71",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Two spheres A and B of exactly same mass are given equal positive and negative charges respectively. Their masses after charging ?",
+        "options": [
+            "mass of A < mass of B",
+            "remains unaffected",
+            "mass of A > mass of B",
+            "Nothing can be said"
+        ],
+        "correctAnswer": "mass of A < mass of B",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e72",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If a linear isotropic dielectric is placed in an electric field of strength E, then the polarisation P is ?",
+        "options": [
+            "directly proportional to E",
+            "directly proportional to E",
+            "inversely proportional to E",
+            "independent of E"
+        ],
+        "correctAnswer": "directly proportional to E",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e73",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If the flux of the electric field through a closed surface is zero, then ?",
+        "options": [
+            "the charge in the vicinity of the surface must be zero",
+            "the charge inside the surface must be zero",
+            "the electric field must be zero everywhere on the surface",
+            "the electric field may not be zero everywhere on the surface"
+        ],
+        "correctAnswer": "the charge inside the surface must be zero",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e74",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Corona discharge is caused by ?",
+        "options": [
+            "Charges moving into the ionized air under the effect of this electric field.",
+            "Ionization of gas molecules due to dielectric breakdown",
+            "High charge density causing high electric fields near a metal’s surface.",
+            "Nothing can be said"
+        ],
+        "correctAnswer": "All of the above",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e75",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When a comb rubbed with dry hair attracts pieces of paper. This is because the ?",
+        "options": [
+            "comb induces a net dipole moment perpendicular to the direction of field",
+            "comb polarizes the piece of paper",
+            "electric field due to the comb is uniform",
+            "comb induces a net dipole moment opposite to the direction of field"
+        ],
+        "correctAnswer": "comb polarizes the piece of paper",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e76",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When a body is charged by induction, then the body ?",
+        "options": [
+            "does not lose any charge",
+            "loses part of the charge on it",
+            "becomes neutral",
+            "loses whole of the charge on it"
+        ],
+        "correctAnswer": "does not lose any charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e77",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "SI unit of permittivity of free space is ?",
+        "options": [
+            "C^2N^-1 m^-2",
+            "Farad",
+            "C^2N^-1 m^-1",
+            "Weber"
+        ],
+        "correctAnswer": "C2N-1 m-2",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e78",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A body is positively charged, it implies that ?",
+        "options": [
+            "negative charge is displaced from its position",
+            "there is only positive charge in the body.",
+            "there is equal positive and negative charge in the body but the positive charge lies in the outer regions",
+            "there is positive as well as negative charge in the body but the positive charge is more than negative charge"
+        ],
+        "correctAnswer": "there is positive as well as negative charge in the body but the positive charge is more than negative charge",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e79",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Two point charges + Q and + q are separated by a certain distance. If + Q > + q then in between the charges the electric field is zero at a point ?",
+        "options": [
+            "no where on the line segment joining + Q and + q.",
+            "exactly at the mid-point of line segment joining + Q and + q.",
+            "closer to + q.",
+            "closer to + Q"
+        ],
+        "correctAnswer": "closer to + q",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e80",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Positive electric flux indicates that electric lines of force are directed ?",
+        "options": [
+            "inwards",
+            "outwards",
+            "either (a) or (b)",
+            "None of these"
+        ],
+        "correctAnswer": "outwards",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e81",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "For distance far away from centre of dipole the change in magnitude of electric field with change in distance from the centre of dipole is ?",
+        "options": [
+            "zero.",
+            "more in case of axis of dipole as compared to equatorial plane",
+            "more in case of equatorial plane of dipole as compared to axis of dipole.",
+            "same in equatorial plane as well as the axis of dipole."
+        ],
+        "correctAnswer": "more in case of axis of dipole as compared to equatorial plane",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e82",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Charge motion within the Gaussian surface gives changing physical quantity ?",
+        "options": [
+            "charge",
+            "electric field",
+            "gaussian surface area",
+            "electric flux"
+        ],
+        "correctAnswer": "electric field",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e83",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The S.I. unit of electric flux is ?",
+        "options": [
+            "volt × metre",
+            "weber",
+            "newton per coulomb",
+            "joule per coulomb"
+        ],
+        "correctAnswer": "volt × metre",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e84",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When some charge is transferred to ...A... it readily gets distributed over the entire surface of ... A... If some charge is put on ... B..., it stays at the same place. Here, A and B refer to ?",
+        "options": [
+            "conductor, conductor",
+            "insulator, conductor",
+            "conductor, insulator",
+            "insulator, insulator"
+        ],
+        "correctAnswer": "conductor, insulator",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e85",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "Electric lines of force ?",
+        "options": [
+            "are imaginary",
+            "exist everywhere",
+            "exist only in the immediate vicinity of electric charges",
+            "exist only when both positive and negative charges are near one another"
+        ],
+        "correctAnswer": "are imaginary",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e86",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "If an object possesses an electric charge, it is said to be electrified or ... A ... When it has no charge, it is said to be ... B ... Here, A and B refer to ?",
+        "options": [
+            "discharged, charged",
+            "active, reactive",
+            "charged, neutral",
+            "neutral, charged"
+        ],
+        "correctAnswer": "charged, neutral",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e87",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric dipole will experience a net force when it is placed in ?",
+        "options": [
+            "a non-uniform electric field",
+            "None of these",
+            "a uniform electric field",
+            "both (a) and (c)"
+        ],
+        "correctAnswer": "a non-uniform electric field",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e88",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The unit of electric field is not equivalent to ?",
+        "options": [
+            "J / C",
+            "N / C",
+            "J / Cm",
+            "V / m"
+        ],
+        "correctAnswer": "J / C",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e89",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "1 V equals to ?",
+        "options": [
+            "1 JC",
+            "1 J",
+            "1 CJ-1",
+            "1 JC-1"
+        ],
+        "correctAnswer": "JC-1",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e90",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The number of electrons contained in one coulomb of charge is ?",
+        "options": [
+            "1.6 × 10^19",
+            "6.25 × 10^18",
+            "6.25 × 10^17",
+            "1.6 × 10^19"
+        ],
+        "correctAnswer": "6.25 × 10^18",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e91",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric dipole is placed at an angle of 30° to a non-uniform electric field. The dipole will experience ?",
+        "options": [
+            "a torque only",
+            "a translational force only in the direction of the field",
+            "a translational force only in the direction normal to the direction of the field",
+            "a torque as well as a translational force"
+        ],
+        "correctAnswer": "a torque as well as a translational force",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e92",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "An electric dipole is placed at the centre of a sphere then ?",
+        "options": [
+            "the electric field is not zero anywhere on the sphere.",
+            "the electric field is zero on a circle on the sphere.",
+            "the flux of the electric field through the sphere is not zero.",
+            "the electric field is zero at every point of the sphere."
+        ],
+        "correctAnswer": "the electric field is zero on a circle on the sphere.",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e93",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A current of 1 A is drawn by a filament of an electric bulb. Number of electrons passing through a cross-section of the filament in 16 seconds would be roughly ?",
+        "options": [
+            "1023",
+            "1018",
+            "1020",
+            "1016"
+        ],
+        "correctAnswer": "1020",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e94",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "How many joules of electrical energy are transferred per second by a 6 V; 0.5 A Lamp ?",
+        "options": [
+            "0.83 J/s",
+            "30 J/s",
+            "3 J/s",
+            "12 J/s"
+        ],
+        "correctAnswer": "3 J/s",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e95",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The free electrons of a metal ?",
+        "options": [
+            "Are free to escape through the surface",
+            "Do not collide with each other",
+            "Are free to move anywhere in the metal",
+            "Do not collide with each other"
+        ],
+        "correctAnswer": "Are free to move anywhere in the metal",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e96",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The current in a wire ?",
+        "options": [
+            "Does not depend on resistance and potential difference",
+            "Depends only on the resistance of the wire",
+            "Depends on both resistance and potential difference",
+            "Depends only on the potential difference applied"
+        ],
+        "correctAnswer": "Depends on both resistance and potential difference",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e97",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "When there is an electric current passing through a wire, the particles moving are ?",
+        "options": [
+            "Ions",
+            "Electrons",
+            "Atoms",
+            "Protons"
+        ],
+        "correctAnswer": "Electrons",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e98",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "What is the maximum resistance which can be made using five resistors each of 1/5 W ?",
+        "options": [
+            "10 ohm",
+            "1 ohm",
+            "5 ohm",
+            "1/5 ohm"
+        ],
+        "correctAnswer": "1 ohm",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e99",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A student carries out an experiment and plots the V-I graph of three samples of nichrome wire with resistances R1 R2 and R3 respectively. Which of the following is true ?",
+        "options": [
+            "R2 > R3 > R1",
+            "R3 > R2 > R1",
+            "R1 > R2 > R3",
+            "R1 = R2 = R3"
+        ],
+        "correctAnswer": "R3 > R2 > R1",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e100",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "A student carries out an experiment and plots the V-I graph of three samples of nichrome wire with resistances R1 R2 and R3 respectively. Which of the following is true ?",
+        "options": [
+            "R2 > R3 > R1",
+            "R3 > R2 > R1",
+            "R1 > R2 > R3",
+            "R1 = R2 = R3"
+        ],
+        "correctAnswer": "R3 > R2 > R1",
+        "__v": 0
+    },
+    {
+        "_id": "646ecb1250a266f53cc5e9e100",
+        "course": "12th (CBSE)",
+        "subject": "Physics",
+        "topic": "Miscellaneous",
+        "question": "The resistivity does not change if ?",
+        "options": [
+            "the temperature is changed",
+            "both material and temperature are changed",
+            "the material is changed",
+            "the shape of the resistor is changed"
+        ],
+        "correctAnswer": "the shape of the resistor is changed",
+        "__v": 0
+    }
+]
