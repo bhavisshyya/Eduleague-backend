@@ -5,6 +5,12 @@ export const checkParticipant = async (req, res, next) => {
    const quiz = await Quiz.findById(id).populate("participants");
    const participants = quiz.participants;
 
+   const maxCapacity = quiz.capacity; // Assuming the quiz document has a field named "capacity" that specifies the maximum capacity
+
+   if (participants.length >= maxCapacity) {
+      return next("Quiz has reached its maximum capacity");
+   }
+
    for (let i = 0; i < participants.length; i++) {
       if (participants[i].user == req.user.userId) {
          return next("You have already participated in this quiz");
