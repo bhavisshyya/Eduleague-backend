@@ -62,9 +62,9 @@ export const createQuiz = async (req, res) => {
 //  get single Quiz
 
 export const getQuiz = async (req, res) => {
-   const type = req.params.type || "single";
+   const id = req.params.id;
 
-   const quiz = await Quiz.findById({ type })
+   const quiz = await Quiz.findById(id)
       .populate("questions")
       .populate("creator")
       .populate({
@@ -86,13 +86,15 @@ export const getQuiz = async (req, res) => {
 //  Get All Quizs
 
 export const getAllQuizes = async (req, res) => {
-   const type = req.query.type;
+   const type = req.query.type || "single";
 
-   const quizs = await Quiz.find({ isCompleted: true })
-      .populate("creator")
-      .sort("-startTime");
+   const quiz = await Quiz.find({ type });
 
-   res.status(200).json({ quizs });
+   if (!quiz) {
+      return res.status(404).json({ error: "Quiz not found" });
+   }
+
+   res.status(200).json(quiz);
 };
 
 // update quiz (end quiz)
