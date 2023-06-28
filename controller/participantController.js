@@ -2,7 +2,7 @@ import Participant from "../models/participantModel.js";
 import Quiz from "../models/quizModel.js";
 import User from "../models/userModel.js";
 
-export const createParticipant = async (req, res) => {
+export const joinQuiz = async (req, res) => {
    const { id } = req.params;
    const userId = req.user.userId;
    const participant = new Participant({
