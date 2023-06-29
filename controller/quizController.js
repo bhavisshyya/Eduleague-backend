@@ -25,18 +25,21 @@ export const createQuiz = async (req, res) => {
          .json({ error: "No questions available for the chosen filters" });
    }
 
-   // Create a new quiz
+   const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+
+   const selectedQuestions = shuffledQuestions.slice(0, 10);
+   // console.log(selectedQuestions);
    const quiz = new Quiz({
       creator,
       course,
       subject: subject || null,
       topic: topic || null,
-      questions: questions.map((question) => question._id),
       entryCoins,
       type: type || "single",
       capacity,
    });
-
+   selectedQuestions.map((q) => quiz.questions.push(q));
+   // quiz.questions = selectedQuestions;
    const userId = req.user.userId;
    const participant = new Participant({
       quiz: quiz.id,
@@ -52,8 +55,6 @@ export const createQuiz = async (req, res) => {
    await user.save();
    quiz.noOfParticipants++;
    quiz.participants.push(savedParticipant);
-
-   await quiz.populate("questions");
 
    await quiz.save();
 
@@ -130,7 +131,12 @@ export const updateQuiz = async (req, res, next) => {
 
    user.balance += walletAmount;
    user.walletLog.push(`+${walletAmount} for winning the quiz`);
+   user.quizWon++;
    await user.save();
-   console.log(user);
-   res.json({ winner });
+   if (quiz.capacity === sortedParticipants.length && quiz.type === "single") {
+      res.status(200).json(sortedParticipants);
+   }else{
+      res.status(200).json({ winner });
+   }
+   
 };
