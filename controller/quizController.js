@@ -65,7 +65,7 @@ export const createQuiz = async (req, res) => {
 
 export const getQuiz = async (req, res) => {
    const id = req.params.id;
-
+   
    const quiz = await Quiz.findById(id)
       .populate("questions")
       .populate("creator")
@@ -88,15 +88,21 @@ export const getQuiz = async (req, res) => {
 //  Get All Quizs
 
 export const getAllQuizes = async (req, res) => {
-   const type = req.query.type || "single";
+   // const type = req.query.type || "single";
+   const userId = req.user.userId;
+   const quizes = await Quiz.find({
+      createdBy: { $ne: userId }, // quizzes where createdBy is not equal to the user ID
+      isCompleted: false // quizzes where isCompleted is false
+    });
 
-   const quiz = await Quiz.find({ type });
+    if (quizes.length === 0) {
+      return res.status(404).json({ error: "Quizzes not found" });
+    }
 
-   if (!quiz) {
-      return res.status(404).json({ error: "Quiz not found" });
-   }
+   const singleQuizes = quizes.filter(quiz => quiz.type === "single");
+   const communityQuizes = quizes.filter(quiz => quiz.type === "community");
 
-   res.status(200).json(quiz);
+   res.status(200).json(singleQuizes, communityQuizes);
 };
 
 // update quiz (end quiz)
