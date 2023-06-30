@@ -102,7 +102,7 @@ export const getAllQuizes = async (req, res) => {
    const singleQuizes = quizes.filter(quiz => quiz.type === "single");
    const communityQuizes = quizes.filter(quiz => quiz.type === "community");
 
-   res.status(200).json(singleQuizes, communityQuizes);
+   res.status(200).json({singleQuizes, communityQuizes});
 };
 
 // update quiz (end quiz)
