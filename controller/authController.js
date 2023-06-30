@@ -58,11 +58,11 @@ export const login = async (req, res, next) => {
 
    let user = await User.findOne({ phoneNo }).select("+password");
 
-   if (!user) return next("wrong phone Number or password");
+   if (!user) return res.status(200).json("wrong phone Number or password");
 
    const check = await user.comparePassword(password);
 
-   if (!check) return next("wrong phone Number or password");
+   if (!check) return res.status(200).json("wrong phone Number or password");
 
    const token = user.createJWT();
 
