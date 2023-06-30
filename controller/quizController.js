@@ -65,7 +65,7 @@ export const createQuiz = async (req, res) => {
 
 export const getQuiz = async (req, res) => {
    const id = req.params.id;
-   
+
    const quiz = await Quiz.findById(id)
       .populate("questions")
       .populate("creator")
@@ -92,17 +92,17 @@ export const getAllQuizes = async (req, res) => {
    const userId = req.user.userId;
    const quizes = await Quiz.find({
       createdBy: { $ne: userId }, // quizzes where createdBy is not equal to the user ID
-      isCompleted: false // quizzes where isCompleted is false
-    });
+      isCompleted: false, // quizzes where isCompleted is false
+   });
 
-    if (quizes.length === 0) {
+   if (quizes.length === 0) {
       return res.status(404).json({ error: "Quizzes not found" });
-    }
+   }
 
-   const singleQuizes = quizes.filter(quiz => quiz.type === "single");
-   const communityQuizes = quizes.filter(quiz => quiz.type === "community");
+   const singleQuizes = quizes.filter((quiz) => quiz.type === "single");
+   const communityQuizes = quizes.filter((quiz) => quiz.type === "community");
 
-   res.status(200).json({singleQuizes, communityQuizes});
+   res.status(200).json({ singleQuizes, communityQuizes });
 };
 
 // update quiz (end quiz)
@@ -143,6 +143,7 @@ export const updateQuiz = async (req, res, next) => {
    user.walletLog.push(`+${walletAmount} for winning the quiz`);
    user.quizWon++;
    await user.save();
-
+   quiz.isCompleted = true;
+   await quiz.save();
    res.status(200).json({ winner, sortedParticipants });
 };
