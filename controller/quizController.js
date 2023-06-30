@@ -109,6 +109,10 @@ export const updateQuiz = async (req, res, next) => {
       { new: true }
    ).populate({
       path: "participants",
+      populate: {
+         path: "user",
+         model: "User",
+      },
    });
 
    if (!quiz) {
