@@ -133,10 +133,6 @@ export const updateQuiz = async (req, res, next) => {
    user.walletLog.push(`+${walletAmount} for winning the quiz`);
    user.quizWon++;
    await user.save();
-   if (quiz.capacity === sortedParticipants.length && quiz.type === "single") {
-      res.status(200).json(sortedParticipants);
-   }else{
-      res.status(200).json({ winner });
-   }
-   
+
+   res.status(200).json({ winner, sortedParticipants });
 };
