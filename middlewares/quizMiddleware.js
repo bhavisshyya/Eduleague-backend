@@ -1,4 +1,5 @@
 import Quiz from "../models/quizModel.js";
+import User from "../models/userModel.js";
 
 export const checkParticipant = async (req, res, next) => {
    const id = req.params.id;
@@ -20,6 +21,13 @@ export const checkParticipant = async (req, res, next) => {
 };
 
 // here
+export const checkBalance = async (req, res, next) => {
+   const userId = req.user.userId;
+   const user = await User.findById(userId);
+   if (user.balance < req.body.entryCoins)
+      return next("you dont have enough coins");
+   else next();
+};
 
 export const checkCreator = async (req, res, next) => {
    const id = req.params.id;
