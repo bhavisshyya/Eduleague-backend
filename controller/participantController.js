@@ -18,7 +18,6 @@ export const joinQuiz = async (req, res) => {
       { new: true }
    );
    quiz.noOfParticipants++;
-   console.log(quiz);
    await quiz.save();
 
    const user = await User.findById(userId);

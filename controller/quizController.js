@@ -17,7 +17,6 @@ export const createQuiz = async (req, res) => {
    if (topic) filter.topic = topic;
 
    const questions = await Question.find(filter);
-   console.log(questions);
 
    if (questions.length === 0) {
       return res
@@ -28,7 +27,6 @@ export const createQuiz = async (req, res) => {
    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 
    const selectedQuestions = shuffledQuestions.slice(0, 10);
-   // console.log(selectedQuestions);
    const quiz = new Quiz({
       creator,
       course,
