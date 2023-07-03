@@ -18,8 +18,6 @@ const userSchema = new mongoose.Schema(
       },
       phoneNo: {
          type: String,
-         unique: true,
-         validate: validator.isMobilePhone,
       },
       isAdmin: {
          type: Boolean,
