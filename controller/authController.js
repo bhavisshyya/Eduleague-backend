@@ -26,7 +26,6 @@ export const register = async (req, res, next) => {
       ref_user.walletLog.push("+25 coins through referral");
       await ref_user.save();
    }
-   console.log(user);
    const savedUser = await user.save();
 
    const generate_referral = savedUser._id.toString().slice(-10);
@@ -84,7 +83,7 @@ export const socialLogin = async (req, res, next) => {
    if (!socialTag) return next("social tag is required");
 
    const user = await User.findOne({ socialId: socialId });
-   console.log(user, req.body);
+
    if (user) {
       // user has already logged in
       const token = jwt.sign(
