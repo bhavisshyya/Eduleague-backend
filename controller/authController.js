@@ -11,6 +11,8 @@ export const register = async (req, res, next) => {
 
    if (!password) return next("password is required");
 
+   if (phoneNo.length !== 10) return next("enter a 10 digit mobile number");
+
    const phoneNoCheck = await User.findOne({ phoneNo });
    if (phoneNoCheck) return next("This phone number is already been used");
 
