@@ -43,6 +43,8 @@ export const register = async (req, res, next) => {
          fName: user.fName,
          lName: user.lName,
          phoneNo: user.phoneNo,
+         balance: user.balance,
+         walletLog: user.walletLog,
          location: user.location,
          referralCode: generate_referral,
          token,

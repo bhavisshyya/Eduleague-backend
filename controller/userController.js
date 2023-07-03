@@ -45,5 +45,5 @@ export const getUserAuth = async (req, res, next) => {
    const user = await User.findById(req.user.userId);
    if (!user) return next("no user found");
    const { password, isAdmin, ...others } = user._doc;
-   res.status(200).json({ success: true, others });
+   res.status(200).json({ success: true, user: others });
 };
