@@ -102,11 +102,12 @@ export const socialLogin = async (req, res, next) => {
       });
    } else {
       const newUser = new User({ socialId, socialTag });
-      console.log(newUser);
       const savedUser = await newUser.save();
       const generate_referral = savedUser._id.toString().slice(-10);
       savedUser.referralCode = generate_referral;
       savedUser.walletLog.push("+50 coins as signup bonus");
+      const generate_name = `user_${socialId}`;
+      savedUser.fName = generate_name;
       const socialUser = await savedUser.save();
       const token = jwt.sign(
          { userId: savedUser._id, isEmp: savedUser.isEmployer },
