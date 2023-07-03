@@ -4,7 +4,7 @@ export const errorMiddelware = (err, req, res, next) => {
    console.log(err);
 
    const defaultErrors = {
-      statusCode: 500,
+      statusCode: 200,
       message: err,
    };
 
