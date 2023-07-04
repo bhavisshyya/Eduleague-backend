@@ -36,8 +36,7 @@ export const createQuiz = async (req, res) => {
       type: type || "single",
       capacity,
    });
-   selectedQuestions.map((q) => quiz.questions.push(q));
-   // quiz.questions = selectedQuestions;
+   selectedQuestions.map((q) => quiz.questions.push(q._id));
    const userId = req.user.userId;
    const participant = new Participant({
       quiz: quiz.id,
@@ -65,16 +64,15 @@ export const getQuiz = async (req, res) => {
    const id = req.params.id;
 
    const quiz = await Quiz.findById(id)
-      .populate("questions")
-      .populate("creator")
-      .populate({
-         path: "participants",
-         match: { isCompleted: true },
-         populate: {
-            path: "user",
-            model: "User",
-         },
-      });
+      .populate("participants")
+      .populate("creator");
+
+   const populateQuestions = await Question.find({
+      _id: { $in: quiz.questions },
+   });
+
+   quiz.questions = populateQuestions;
+   console.log(populateQuestions);
 
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });

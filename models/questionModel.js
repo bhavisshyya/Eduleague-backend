@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
+   _id: {
+      type: String,
+   },
    course: {
       type: String,
       required: true,
