@@ -26,7 +26,7 @@ export const joinQuiz = async (req, res) => {
    user.walletLog.push(`-${quiz.entryCoins} for joining the quiz`);
    await user.save();
 
-   res.status(201).json(savedParticipant);
+   res.status(201).json({ success: true, savedParticipant });
 };
 
 export const getParticipant = async (req, res, next) => {

@@ -76,7 +76,6 @@ export const getQuiz = async (req, res) => {
    });
 
    quiz.questions = populateQuestions;
-   console.log(populateQuestions);
 
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });
