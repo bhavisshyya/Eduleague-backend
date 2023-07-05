@@ -55,7 +55,7 @@ export const createQuiz = async (req, res) => {
 
    await quiz.save();
 
-   res.status(201).json({
+   res.status(200).json({
       message: "Quiz created successfully",
       quiz,
       questions: selectedQuestions,
