@@ -144,5 +144,5 @@ export const updateQuiz = async (req, res, next) => {
    await user.save();
    quiz.isCompleted = true;
    await quiz.save();
-   res.status(200).json({ winner, sortedParticipants });
+   res.status(200).json({ winner, sortedParticipants, quiz });
 };
