@@ -90,9 +90,9 @@ export const getAllQuizes = async (req, res) => {
    // const type = req.query.type || "single";
    const userId = req.user.userId;
    const quizes = await Quiz.find({
-      createdBy: { $ne: userId }, 
-      isCompleted: false, 
-   }).sort({ startTime: -1 });;
+      createdBy: { $ne: userId },
+      isCompleted: false,
+   }).sort({ startTime: -1 });
 
    if (quizes.length === 0) {
       return res.status(404).json({ error: "Quizzes not found" });
@@ -109,14 +109,9 @@ export const updateQuiz = async (req, res, next) => {
    const { id } = req.params;
    const endTime = Date.now();
 
-   const checkQuiz = await Quiz.findById(id);
-   if(checkQuiz.isCompleted === true){
-      return next("Already updated");
-   }
-
    const quiz = await Quiz.findByIdAndUpdate(
       { _id: id },
-      { endTime, isCompleted: true },
+      { endTime },
       { new: true }
    ).populate({
       path: "participants",
@@ -136,8 +131,13 @@ export const updateQuiz = async (req, res, next) => {
       }
       return b.totalMarks - a.totalMarks;
    });
-
    const winner = sortedParticipants[0];
+   if (quiz.isCompleted === true) {
+      res.status(200).json({ quiz, winner, sortedParticipants });
+   }
+
+   quiz.isCompleted = true;
+   await quiz.save();
 
    const user = await User.findById(winner.user);
 
