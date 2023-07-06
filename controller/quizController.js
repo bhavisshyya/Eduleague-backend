@@ -130,24 +130,24 @@ export const updateQuiz = async (req, res, next) => {
       return res.status(404).json({ error: "Quiz not found" });
    }
 
-   // const sortedParticipants = quiz.participants.sort((a, b) => {
-   //    if (a.totalMarks === b.totalMarks) {
-   //       return a.timeTaken - b.timeTaken;
-   //    }
-   //    return b.totalMarks - a.totalMarks;
-   // });
    const sortedParticipants = quiz.participants.sort((a, b) => {
       if (a.totalMarks === b.totalMarks) {
          return a.timeTaken - b.timeTaken;
       }
-      if (a.totalMarks < 0 && b.totalMarks >= 0) {
-         return -1; // Put participants with negative marks first
-      }
-      if (a.totalMarks >= 0 && b.totalMarks < 0) {
-         return 1; // Put participants with positive marks first
-      }
-      return b.totalMarks - a.totalMarks; // Sort by totalMarks in descending order
+      return b.totalMarks - a.totalMarks;
    });
+   // const sortedParticipants = quiz.participants.sort((a, b) => {
+   //    if (a.totalMarks === b.totalMarks) {
+   //       return a.timeTaken - b.timeTaken;
+   //    }
+   //    if (a.totalMarks < 0 && b.totalMarks >= 0) {
+   //       return -1; // Put participants with negative marks first
+   //    }
+   //    if (a.totalMarks >= 0 && b.totalMarks < 0) {
+   //       return 1; // Put participants with positive marks first
+   //    }
+   //    return b.totalMarks - a.totalMarks; // Sort by totalMarks in descending order
+   // });
 
    const winner = sortedParticipants[0];
 
