@@ -119,18 +119,19 @@ export const updateQuiz = async (req, res, next) => {
          path: "user",
          model: "User",
       },
+      options: {
+         sort: {
+            totalMarks: -1, // Sort by totalMarks in descending order
+            timeTaken: 1, // Sort by timeTaken in ascending order
+         },
+      },
    });
 
    if (!quiz) {
       return res.status(404).json({ error: "Quiz not found" });
    }
 
-   const sortedParticipants = quiz.participants.sort((a, b) => {
-      if (a.totalMarks === b.totalMarks) {
-         return a.timeTaken - b.timeTaken;
-      }
-      return b.totalMarks - a.totalMarks;
-   });
+   const sortedParticipants = quiz.participants;
    const winner = sortedParticipants[0];
    if (quiz.isCompleted === true) {
       return res.status(200).json({ quiz, winner, sortedParticipants });
