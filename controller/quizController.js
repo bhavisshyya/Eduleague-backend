@@ -98,12 +98,8 @@ export const getAllQuizes = async (req, res) => {
       return res.status(404).json({ error: "Quizzes not found" });
    }
 
-   const singleQuizes = quizes
-      .filter((quiz) => quiz.type === "single")
-      .sort("-startTime");
-   const communityQuizes = quizes
-      .filter((quiz) => quiz.type === "community")
-      .sort("-startTime");
+   const singleQuizes = quizes.filter((quiz) => quiz.type === "single");
+   const communityQuizes = quizes.filter((quiz) => quiz.type === "community");
 
    res.status(200).json({ singleQuizes, communityQuizes });
 };
