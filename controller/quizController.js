@@ -90,9 +90,9 @@ export const getAllQuizes = async (req, res) => {
    // const type = req.query.type || "single";
    const userId = req.user.userId;
    const quizes = await Quiz.find({
-      createdBy: { $ne: userId }, // quizzes where createdBy is not equal to the user ID
-      isCompleted: false, // quizzes where isCompleted is false
-   });
+      createdBy: { $ne: userId }, 
+      isCompleted: false, 
+   }).sort({ startTime: -1 });;
 
    if (quizes.length === 0) {
       return res.status(404).json({ error: "Quizzes not found" });
@@ -142,7 +142,5 @@ export const updateQuiz = async (req, res, next) => {
    user.walletLog.push(`+${walletAmount} for winning the quiz`);
    user.quizWon++;
    await user.save();
-   quiz.isCompleted = true;
-   await quiz.save();
    res.status(200).json({ winner, sortedParticipants, quiz });
 };
