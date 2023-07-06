@@ -133,20 +133,20 @@ export const updateQuiz = async (req, res, next) => {
    });
    const winner = sortedParticipants[0];
    if (quiz.isCompleted === true) {
-      res.status(200).json({ quiz, winner, sortedParticipants });
+      return res.status(200).json({ quiz, winner, sortedParticipants });
+   } else {
+      quiz.isCompleted = true;
+      await quiz.save();
+
+      const user = await User.findById(winner.user);
+
+      const quizAmount = quiz.entryCoins;
+      const walletAmount = 0.6 * quizAmount + quizAmount;
+
+      user.balance += walletAmount;
+      user.walletLog.push(`+${walletAmount} for winning the quiz`);
+      user.quizWon++;
+      await user.save();
+      res.status(200).json({ winner, sortedParticipants, quiz });
    }
-
-   quiz.isCompleted = true;
-   await quiz.save();
-
-   const user = await User.findById(winner.user);
-
-   const quizAmount = quiz.entryCoins;
-   const walletAmount = 0.6 * quizAmount + quizAmount;
-
-   user.balance += walletAmount;
-   user.walletLog.push(`+${walletAmount} for winning the quiz`);
-   user.quizWon++;
-   await user.save();
-   res.status(200).json({ winner, sortedParticipants, quiz });
 };
