@@ -108,6 +108,12 @@ export const getAllQuizes = async (req, res) => {
 export const updateQuiz = async (req, res, next) => {
    const { id } = req.params;
    const endTime = Date.now();
+
+   const checkQuiz = await Quiz.findById(id);
+   if(checkQuiz.isCompleted === true){
+      return next("Already updated");
+   }
+
    const quiz = await Quiz.findByIdAndUpdate(
       { _id: id },
       { endTime, isCompleted: true },
