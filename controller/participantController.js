@@ -23,7 +23,8 @@ export const joinQuiz = async (req, res) => {
    const user = await User.findById(userId);
    user.quizParticipated++;
    user.balance -= quiz.entryCoins;
-   user.walletLog.push(`-${quiz.entryCoins} for joining the quiz`);
+   const date = Date.now();
+   user.walletLog.push(`-${quiz.entryCoins} for joining the quiz@${date}`);
    await user.save();
 
    res.status(201).json({ success: true, savedParticipant });
@@ -83,8 +84,38 @@ export const updateParticipant = async (req, res, next) => {
    }
 
    const quizId = participant.quiz;
-   await Quiz.findById(quizId);
-   await participant.populate("quiz");
+   const quiz = await Quiz.findById(quizId);
+   if (quiz.type === "single" && quiz.noOfParticipants === 2) {
+      const endTime = Date.now();
+      quiz.endTime = endTime;
+      quiz.isCompleted = true;
+      await quiz.populate({
+         path: "participants",
+         populate: {
+            path: "user",
+            model: "User",
+         },
+         options: {
+            sort: {
+               totalMarks: -1, // Sort by totalMarks in descending order
+               timeTaken: 1, // Sort by timeTaken in ascending order
+            },
+         },
+      });
+      const winner = quiz.participants[0];
+      const user = await User.findById(winner.user);
 
+      const quizAmount = quiz.entryCoins;
+      const walletAmount = 0.6 * quizAmount + quizAmount;
+      user.balance += walletAmount;
+      user.walletLog.push(`+${walletAmount} for winning the quiz`);
+      user.quizWon++;
+      console.log(quiz);
+      console.log(user);
+      await user.save();
+      await quiz.save();
+   }
+
+   await participant.populate("quiz");
    res.status(200).json(participant);
 };

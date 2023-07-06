@@ -48,7 +48,8 @@ export const createQuiz = async (req, res) => {
    const user = await User.findById(userId);
    user.quizParticipated++;
    user.balance -= entryCoins;
-   user.walletLog.push(`-${entryCoins} for creating the quiz`);
+   const date = Date.now();
+   user.walletLog.push(`-${entryCoins} for creating the quiz@${date}`);
    await user.save();
    quiz.noOfParticipants++;
    quiz.participants.push(savedParticipant);
@@ -68,7 +69,19 @@ export const getQuiz = async (req, res) => {
    const id = req.params.id;
 
    const quiz = await Quiz.findById(id)
-      .populate("participants")
+      .populate({
+         path: "participants",
+         populate: {
+            path: "user",
+            model: "User",
+         },
+         options: {
+            sort: {
+               totalMarks: -1, // Sort by totalMarks in descending order
+               timeTaken: 1, // Sort by timeTaken in ascending order
+            },
+         },
+      })
       .populate("creator");
 
    const populateQuestions = await Question.find({
@@ -81,7 +94,10 @@ export const getQuiz = async (req, res) => {
       return res.status(404).json({ error: "Quiz not found" });
    }
 
-   res.status(200).json(quiz);
+   const sortedParticipants = quiz.participants;
+   const winner = sortedParticipants[0];
+
+   res.status(200).json({ quiz, sortedParticipants, winner });
 };
 
 //  Get All Quizs
@@ -90,9 +106,11 @@ export const getAllQuizes = async (req, res) => {
    // const type = req.query.type || "single";
    const userId = req.user.userId;
    const quizes = await Quiz.find({
-      createdBy: { $ne: userId },
+      // createdBy: { $ne: userId },
       isCompleted: false,
-   }).sort({ startTime: -1 });
+   })
+      .populate("creator")
+      .sort({ startTime: -1 });
 
    if (quizes.length === 0) {
       return res.status(404).json({ error: "Quizzes not found" });
@@ -145,7 +163,7 @@ export const updateQuiz = async (req, res, next) => {
       const walletAmount = 0.6 * quizAmount + quizAmount;
 
       user.balance += walletAmount;
-      user.walletLog.push(`+${walletAmount} for winning the quiz`);
+      user.walletLog.push(`+${walletAmount} for winning the quiz@${endTime}`);
       user.quizWon++;
       await user.save();
       res.status(200).json({ winner, sortedParticipants, quiz });

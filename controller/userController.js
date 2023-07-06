@@ -36,8 +36,7 @@ export const getWallet = async (req, res, next) => {
    const user = await User.findOne({ _id: userId });
    let wallet = {};
    wallet.balance = user.balance;
-   wallet.log = user.walletLog;
-
+   wallet.log = user.walletLog.reverse();
    res.status(200).json(wallet);
 };
 
