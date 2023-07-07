@@ -3,7 +3,7 @@ import Question from "../models/questionModel.js";
 import Participant from "../models/participantModel.js";
 import User from "../models/userModel.js";
 
-export const createQuiz = async (req, res) => {
+export const createQuiz = async (req, res, next) => {
    const { course, subject, topic, entryCoins, type, capacity } = req.body;
    const creator = req.user.userId;
    if (!course || !entryCoins) {
@@ -11,6 +11,12 @@ export const createQuiz = async (req, res) => {
          .status(400)
          .json({ error: "Course and entryCoins are required parameters" });
    }
+
+   if (type === "community" && !req.user.isAdmin)
+      return next("only admins can create community quiz");
+
+   if (type === "single" && capacity > 2)
+      return next("single quiz can have max capacity of 2");
 
    const filter = { course };
    if (subject) filter.subject = subject;
@@ -38,21 +44,23 @@ export const createQuiz = async (req, res) => {
    });
    selectedQuestions.map((q) => quiz.questions.push(q._id));
    const userId = req.user.userId;
-   const participant = new Participant({
-      quiz: quiz.id,
-      user: userId,
-      isCompleted: false,
-   });
-
-   const savedParticipant = await participant.save();
    const user = await User.findById(userId);
-   user.quizParticipated++;
+
+   if (type === "single") {
+      const participant = new Participant({
+         quiz: quiz.id,
+         user: userId,
+         isCompleted: false,
+      });
+      const savedParticipant = await participant.save();
+      quiz.participants.push(savedParticipant);
+      quiz.noOfParticipants++;
+      user.quizParticipated++;
+   }
    user.balance -= entryCoins;
    const date = Date.now();
    user.walletLog.push(`-${entryCoins} for creating the quiz@${date}`);
    await user.save();
-   quiz.noOfParticipants++;
-   quiz.participants.push(savedParticipant);
 
    await quiz.save();
 
