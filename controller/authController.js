@@ -39,6 +39,7 @@ export const register = async (req, res, next) => {
    res.status(201).json({
       success: true,
       message: "user registered",
+      token,
       user: {
          fName: user.fName,
          lName: user.lName,
@@ -47,7 +48,6 @@ export const register = async (req, res, next) => {
          walletLog: user.walletLog,
          location: user.location,
          referralCode: generate_referral,
-         token,
       },
    });
 };
