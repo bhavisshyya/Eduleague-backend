@@ -1,3 +1,4 @@
+import Kyc from "../models/kycModel.js";
 import User from "../models/userModel.js";
 
 export const updateUser = async (req, res, next) => {
@@ -46,3 +47,55 @@ export const getUserAuth = async (req, res, next) => {
    const { password, isAdmin, ...others } = user._doc;
    res.status(200).json({ success: true, user: others });
 };
+
+export const updateKyc = async (req, res, next) => {
+   const userId = req.user.userId;
+   const {
+      address,
+      pincode,
+      documentType,
+      document,
+      nameOnAccount,
+      accountNumber,
+      IfscCode,
+      name,
+      phoneNo,
+   } = req.body;
+
+   const user = await User.findById(userId);
+
+   if (!user) {
+      return next("User not found");
+   }
+
+   let kyc = await Kyc.findOne({ user: userId });
+   if (!kyc) {
+      kyc = new Kyc({
+         address,
+         pincode,
+         documentType,
+         document,
+         nameOnAccount,
+         accountNumber,
+         IfscCode,
+         user: userId,
+         name,
+         phoneNo,
+      });
+   } else {
+      kyc.address = address;
+      kyc.pincode = pincode;
+      kyc.documentType = documentType;
+      kyc.document = document;
+      kyc.nameOnAccount = nameOnAccount;
+      kyc.accountNumber = accountNumber;
+      kyc.IfscCode = IfscCode;
+      kyc.name = name;
+      kyc.phoneNo = phoneNo;
+   }
+
+   await kyc.save();
+
+   return res.status(200).send({ kyc });
+};
+
