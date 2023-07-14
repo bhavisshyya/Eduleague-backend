@@ -70,6 +70,10 @@ const userSchema = new mongoose.Schema(
       address: {
          type: String,
       },
+      isKycSubmitted: {
+         type: Boolean,
+         default: false,
+      },
    },
    { timestamps: true }
 );
