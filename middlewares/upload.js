@@ -15,7 +15,8 @@ export const upload = multer({
    storage: storage,
    fileFilter: function (req, file, callback) {
       let ext = path.extname(file.originalname);
-      if (ext == ".pdf") callback(null, true);
+      if (ext == ".pdf" || ext == ".jpg" || ext == ".jpeg" || ext == ".png")
+         callback(null, true);
       else {
          console.log("only pdf format is allowed");
          callback(null, false);
