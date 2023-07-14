@@ -18,7 +18,7 @@ export const upload = multer({
       if (ext == ".pdf" || ext == ".jpg" || ext == ".jpeg" || ext == ".png")
          callback(null, true);
       else {
-         console.log("only pdf format is allowed");
+         console.log("only pdf or image format is allowed");
          callback(null, false);
       }
    },
