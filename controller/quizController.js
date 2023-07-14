@@ -111,14 +111,30 @@ export const getQuiz = async (req, res) => {
 //  Get All Quizs
 
 export const getAllQuizes = async (req, res) => {
-   // const type = req.query.type || "single";
+   const { course, subject, topic, createdBy } = req.query;
+   let filter = { isCompleted: false };
+   if (course) filter.course = course;
+   if (subject) filter.subject = subject;
+   if (topic) filter.topic = topic;
+
    const userId = req.user.userId;
-   const quizes = await Quiz.find({
-      // createdBy: { $ne: userId },
-      isCompleted: false,
-   })
+   let quizes = await Quiz.find(filter)
       .populate("creator")
       .sort({ startTime: -1 });
+
+   const fName = createdBy.split(" ")[0];
+   const lName = createdBy.split(" ")[1];
+
+   if (fName) {
+      quizes = quizes.filter((quiz) => {
+         if (lName) {
+            return quiz.creator.fName === fName && quiz.creator.lName === lName;
+         } else {
+            return quiz.creator.fName === fName;
+         }
+      });
+   }
+   console.log(quizes);
 
    if (quizes.length === 0) {
       return res.status(404).json({ error: "Quizzes not found" });
