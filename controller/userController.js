@@ -35,6 +35,9 @@ export const addKyc = async (req, res, next) => {
    else return next("you need to upload your id proof");
    kyc.user = req.user.userId;
    const savedKyc = await kyc.save();
+   const user = await User.findById(req.user.userId);
+   user.isKycSubmitted = true;
+   await user.save();
    res.status(201).json({ success: true, message: "KYC added successfully" });
 };
 
