@@ -122,10 +122,9 @@ export const getAllQuizes = async (req, res) => {
       .populate("creator")
       .sort({ startTime: -1 });
 
-   const fName = createdBy.split(" ")[0];
-   const lName = createdBy.split(" ")[1];
-
    if (fName) {
+      const fName = createdBy.split(" ")[0];
+      const lName = createdBy.split(" ")[1];
       quizes = quizes.filter((quiz) => {
          if (lName) {
             return quiz.creator.fName === fName && quiz.creator.lName === lName;
