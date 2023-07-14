@@ -58,10 +58,18 @@ const userSchema = new mongoose.Schema(
          type: mongoose.Schema.Types.ObjectId,
          ref: "Kyc",
       },
-      //  otpExpiration: {
-      //    type: Date,
-      //    required: true,
-      //  },
+      address: {
+         type: String,
+      },
+      rewards: [
+         {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Reward",
+         },
+      ],
+      address: {
+         type: String,
+      },
    },
    { timestamps: true }
 );
