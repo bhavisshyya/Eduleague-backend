@@ -48,6 +48,15 @@ export const getUserAuth = async (req, res, next) => {
    res.status(200).json({ success: true, user: others });
 };
 
+export const addKyc = async (req, res, next) => {
+   const kyc = new Kyc(req.body);
+   if (req.file) kyc.document = req.file.path;
+   else return next("you need to upload your id proof");
+   kyc.user = req.user.userId;
+   const savedKyc = await kyc.save();
+   res.status(201).json({ success: true, message: "KYC added successfully" });
+};
+
 export const updateKyc = async (req, res, next) => {
    const userId = req.user.userId;
    const {
@@ -98,4 +107,3 @@ export const updateKyc = async (req, res, next) => {
 
    return res.status(200).send({ kyc });
 };
-
