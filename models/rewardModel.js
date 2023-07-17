@@ -19,6 +19,10 @@ const rewardSchema = new mongoose.Schema({
       type: Number,
       required: true,
    },
+   type: {
+      type: String,
+      enum: ["coupon", "item"],
+   },
 });
 
 export default mongoose.model("Reward", rewardSchema);

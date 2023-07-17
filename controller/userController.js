@@ -3,14 +3,14 @@ import User from "../models/userModel.js";
 
 export const updateUser = async (req, res, next) => {
    //this function is only to update user details
-   const { fName, lName } = req.body;
-   if (!fName || !lName) return next("No field can be left empty");
+   const { fName, lName , location } = req.body;
+   // if (!fName || !lName) return next("No field can be left empty");
 
    const user = await User.findOne({ _id: req.user.userId });
 
    // user.email = email;
    user.fName = fName;
-   // user.location = location;
+   user.location = location;
    user.lName = lName;
    await user.save();
 
