@@ -67,7 +67,7 @@ const userSchema = new mongoose.Schema(
             ref: "Reward",
          },
       ],
-      address: {
+      location: {
          type: String,
       },
       isKycSubmitted: {
