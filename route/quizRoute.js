@@ -4,6 +4,7 @@ import {
    getAllQuizes,
    getQuiz,
    updateQuiz,
+   userAnalysis,
 } from "../controller/quizController.js";
 import userAuth from "../middlewares/authMiddleware.js";
 import { checkBalance } from "../middlewares/quizMiddleware.js";

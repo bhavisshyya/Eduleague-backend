@@ -1,9 +1,10 @@
 import Kyc from "../models/kycModel.js";
 import User from "../models/userModel.js";
 
+
 export const updateUser = async (req, res, next) => {
    //this function is only to update user details
-   const { fName, lName , location } = req.body;
+   const { fName, lName, location } = req.body;
    // if (!fName || !lName) return next("No field can be left empty");
 
    const user = await User.findOne({ _id: req.user.userId });

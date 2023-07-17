@@ -191,3 +191,34 @@ export const updateQuiz = async (req, res, next) => {
       res.status(200).json({ winner, sortedParticipants, quiz });
    }
 };
+
+export const userAnalysis = async (req, res, next) => {
+   const userId = req.user.userId;
+   // const quiz = await Quiz.find({ participants: participant._id }).populate({
+   //    path: "participants",
+   //    populate: {
+   //       path: "user",
+   //       model: "User",
+   //    },
+   //    options: {
+   //       sort: {
+   //          totalMarks: -1, // Sort by totalMarks in descending order
+   //          timeTaken: 1, // Sort by timeTaken in ascending order
+   //       },
+   //    },
+   // });
+   const quizzes = await Quiz.find({ isCompleted: true })
+   .populate({
+     path: "participants",
+     populate: {
+       path: "user",
+       model: "User",
+     },
+   })
+   .populate("creator")
+   .sort({ totalMarks: -1, timeTaken: 1 })
+   .filter((quiz) => quiz.participants.some((p) => p.user._id.toString() === userId));
+
+
+   res.json(quizzes);
+};
