@@ -12,7 +12,9 @@ const router = express.Router();
 
 router.post("/create", userAuth, checkBalance, createQuiz);
 router.get("/get-quizes", userAuth, getAllQuizes);
+router.get("/analysis", userAuth, userAnalysis);
 router.get("/:id", userAuth, getQuiz);
 router.put("/:id", updateQuiz);
+
 
 export default router;
