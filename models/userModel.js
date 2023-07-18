@@ -52,7 +52,6 @@ const userSchema = new mongoose.Schema(
       },
       otp: {
          type: String,
-         // required: true,
       },
       kyc: {
          type: mongoose.Schema.Types.ObjectId,
