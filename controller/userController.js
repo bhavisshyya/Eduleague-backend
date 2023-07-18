@@ -1,7 +1,6 @@
 import Kyc from "../models/kycModel.js";
 import User from "../models/userModel.js";
 
-
 export const updateUser = async (req, res, next) => {
    //this function is only to update user details
    const { fName, lName, location } = req.body;
@@ -53,6 +52,7 @@ export const addKyc = async (req, res, next) => {
    const savedKyc = await kyc.save();
    const user = await User.findById(req.user.userId);
    user.isKycSubmitted = true;
+   user.kyc = savedKyc._id;
    await user.save();
    res.status(201).json({ success: true, message: "KYC added successfully" });
 };
