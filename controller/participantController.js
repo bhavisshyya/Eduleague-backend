@@ -88,8 +88,7 @@ export const updateParticipant = async (req, res, next) => {
    if (
       quiz.type === "single" &&
       quiz.noOfParticipants === 2 &&
-      !quiz.isCompleted &&
-      flag
+      !quiz.isCompleted
    ) {
       const endTime = Date.now();
       quiz.endTime = endTime;
