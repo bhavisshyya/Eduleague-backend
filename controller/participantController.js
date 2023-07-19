@@ -85,7 +85,11 @@ export const updateParticipant = async (req, res, next) => {
 
    const quizId = participant.quiz;
    const quiz = await Quiz.findById(quizId);
-   if (quiz.type === "single" && quiz.noOfParticipants === 2) {
+   if (
+      quiz.type === "single" &&
+      quiz.noOfParticipants === 2 &&
+      !quiz.isCompleted
+   ) {
       const endTime = Date.now();
       quiz.endTime = endTime;
       quiz.isCompleted = true;
@@ -110,8 +114,6 @@ export const updateParticipant = async (req, res, next) => {
       user.balance += walletAmount;
       user.walletLog.push(`+${walletAmount} for winning the quiz@${endTime}`);
       user.quizWon++;
-      console.log(quiz);
-      console.log(user);
       await user.save();
       await quiz.save();
    }
