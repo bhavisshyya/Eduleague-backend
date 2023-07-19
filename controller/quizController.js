@@ -219,5 +219,8 @@ export const userAnalysis = async (req, res, next) => {
       }
    });
 
+   winQuiz.reverse();
+   lossQuiz.reverse();
+
    res.status(200).json({ winQuiz, lossQuiz });
 };
