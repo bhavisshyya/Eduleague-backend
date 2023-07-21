@@ -20,12 +20,13 @@ export const register = async (req, res, next) => {
 
    const user = new User(req.body);
    const ref_user = await User.findOne({ referralCode: referral });
-   user.walletLog.push("+50 coins as signup bonus");
+   const date = Date.now();
+   user.walletLog.push(`+50 coins as signup bonus@${date}`);
    if (referral && ref_user) {
       user.balance = 75;
       ref_user.balance += 25;
-      user.walletLog.push("+25 coins through referral");
-      ref_user.walletLog.push("+25 coins through referral");
+      user.walletLog.push(`+25 coins through referral@${date}`);
+      ref_user.walletLog.push(`+25 coins through referral@${date}`);
       await ref_user.save();
    }
    const savedUser = await user.save();
