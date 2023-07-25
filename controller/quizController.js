@@ -58,6 +58,7 @@ export const createQuiz = async (req, res, next) => {
       entryCoins,
       type: type || "single",
       capacity,
+      duration,
    });
    selectedQuestions.map((q) => quiz.questions.push(q._id));
    const userId = req.user.userId;

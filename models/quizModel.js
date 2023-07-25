@@ -44,6 +44,10 @@ const quizSchema = new mongoose.Schema({
       type: Date,
       default: Date.now,
    },
+   duration: {
+      type: Number,
+      default: 300,
+   },
    endTime: {
       type: Date,
    },
