@@ -28,6 +28,14 @@ const questionSchema = new mongoose.Schema({
       type: String,
       required: true,
    },
+   questionnaireBy: {
+      type: String,
+      default: "Eduleague",
+   },
+   duration: {
+      type: Number,
+      default: 30,
+   },
 });
 
 export default mongoose.model("Question", questionSchema);
