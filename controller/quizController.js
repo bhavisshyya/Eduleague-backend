@@ -2,6 +2,7 @@ import Quiz from "../models/quizModel.js";
 import Question from "../models/questionModel.js";
 import Participant from "../models/participantModel.js";
 import User from "../models/userModel.js";
+import axios from "axios";
 
 export const createQuiz = async (req, res, next) => {
    const {
@@ -80,7 +81,11 @@ export const createQuiz = async (req, res, next) => {
    user.walletLog.push(`-${entryCoins} for creating the quiz@${date}`);
    await user.save();
 
-   await quiz.save();
+   const savedQuiz = await quiz.save();
+
+   setTimeout(async () => {
+      await axios.put(`http://localhost:4000/api/v1/quiz/${savedQuiz._id}`);
+   }, 24 * 60 * 60 * 1000);
 
    res.status(200).json({
       message: "Quiz created successfully",
@@ -167,6 +172,7 @@ export const getAllQuizes = async (req, res) => {
 export const updateQuiz = async (req, res, next) => {
    const { id } = req.params;
    const endTime = Date.now();
+   console.log("hit");
 
    const quiz = await Quiz.findByIdAndUpdate(
       { _id: id },

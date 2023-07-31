@@ -13,7 +13,7 @@ export const addReward = async (req, res, next) => {
 };
 
 export const getRewards = async (req, res, next) => {
-   const reward = await Reward.find({ quantity: { $gt: 0 } });
+   const reward = await Reward.find();
    if (!reward)
       return res
          .status(404)
@@ -32,7 +32,6 @@ export const giveReward = async (req, res, next) => {
 
    user.rewards.push(reward);
    user.balance -= reward.price;
-   reward.quantity--;
    await user.save();
    await reward.save();
 

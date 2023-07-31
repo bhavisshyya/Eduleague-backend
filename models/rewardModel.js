@@ -12,12 +12,11 @@ const rewardSchema = new mongoose.Schema({
    code: {
       type: String,
    },
-   desc: {
+   img: {
       type: String,
    },
-   quantity: {
-      type: Number,
-      required: true,
+   desc: {
+      type: String,
    },
    type: {
       type: String,
