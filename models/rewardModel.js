@@ -20,7 +20,6 @@ const rewardSchema = new mongoose.Schema({
    },
    type: {
       type: String,
-      enum: ["coupon", "item"],
    },
 });
 
