@@ -32,6 +32,10 @@ export const giveReward = async (req, res, next) => {
 
    user.rewards.push(reward);
    user.balance -= reward.price;
+   const date = Date.now();
+   user.walletLog.push(
+      `-${reward.price} for purchasing ${reward.name}@${date}`
+   );
    await user.save();
    await reward.save();
 
