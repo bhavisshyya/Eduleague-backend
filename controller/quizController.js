@@ -84,7 +84,9 @@ export const createQuiz = async (req, res, next) => {
    const savedQuiz = await quiz.save();
 
    setTimeout(async () => {
-      await axios.put(`http://localhost:4000/api/v1/quiz/${savedQuiz._id}`);
+      await axios.put(
+         `https://eduleague-6le7o.ondigitalocean.app/api/v1/quiz/${savedQuiz._id}`
+      );
    }, 24 * 60 * 60 * 1000);
 
    res.status(200).json({
