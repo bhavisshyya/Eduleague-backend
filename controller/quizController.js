@@ -225,7 +225,9 @@ export const updateQuiz = async (req, res, next) => {
 
 export const userAnalysis = async (req, res, next) => {
    const userId = req.user.userId;
-   const quizzes = await Quiz.find({ isCompleted: true })
+   const quizzes = await Quiz.find({
+      isCompleted: true,
+   })
       .populate({
          path: "participants",
          populate: {
@@ -243,10 +245,12 @@ export const userAnalysis = async (req, res, next) => {
    const lossQuiz = [];
 
    filteredQuizzes.forEach((quiz) => {
-      if (quiz.participants[0].user._id.toString() === userId) {
-         winQuiz.push(quiz);
-      } else {
-         lossQuiz.push(quiz);
+      if (quiz.participants.length > 1) {
+         if (quiz.participants[0].user._id.toString() === userId) {
+            winQuiz.push(quiz);
+         } else {
+            lossQuiz.push(quiz);
+         }
       }
    });
 
