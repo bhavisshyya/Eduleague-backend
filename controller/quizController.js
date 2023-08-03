@@ -87,7 +87,7 @@ export const createQuiz = async (req, res, next) => {
       await axios.put(
          `https://eduleague-6le7o.ondigitalocean.app/api/v1/quiz/${savedQuiz._id}`
       );
-   }, 24 * 60 * 60 * 1000);
+   }, 20 * 1000);
 
    res.status(200).json({
       message: "Quiz created successfully",
